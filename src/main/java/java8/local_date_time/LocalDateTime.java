@@ -1,11 +1,10 @@
-package java8;
+package java8.local_date_time;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class local_date_time {
+public class LocalDateTime {
     public static void main(String[] args) {
-        LocalDateTime now = LocalDateTime.now();
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
         String format = now.format(DateTimeFormatter.ofPattern("yyy/MM/dd HH:mm:ss"));
         System.out.println(format);
 
