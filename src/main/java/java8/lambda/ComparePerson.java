@@ -13,16 +13,21 @@ public class ComparePerson {
         list.add(new Person("D", 32));
         list.add(new Person("E", 2));
 
-        method1(list);
+        // list.sort((o1, o2) -> o1.getAge() - o2.getAge());
 
-        for (var children : list) {
-            System.out.println(children);
-        }
+        // list.sort(Comparator.comparing(Person::getAge));
 
+        // list.forEach(System.out::println);
 
+        // 使用Stream() Api
+        list.stream().sorted(Comparator.comparing(Person::getAge))
+                .forEach(System.out::println);
     }
 
-    // 方法一：new Comparator<>()
+    /**
+     * 方法一： new Comparator<>()
+     * @param list
+     */
     public static void method1(ArrayList list) {
         Collections.sort(list, new Comparator<Person>() {
             public int compare(Person o1, Person o2) {
@@ -30,4 +35,23 @@ public class ComparePerson {
             }
         });
     }
+
+    /**
+     * 方法二：lambda
+     */
+    public static ArrayList<Person> method2(ArrayList list) {
+        Comparator<Person> res = (Person o1, Person o2) -> o1.getAge().compareTo(o2.getAge());
+        list.sort(res);
+        return list;
+    }
+
+    /**
+     * 方法二：lambda优化+函数式接口
+     */
+    public static ArrayList<Person> method3(ArrayList list) {
+        Comparator<Person> res = Comparator.comparing(Person::getAge);
+        list.sort(res);
+        return list;
+    }
+
 }
