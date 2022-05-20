@@ -1,4 +1,4 @@
-package java8.lambda;
+package jdk8.lambda;
 
 public class Person {
     private String name;

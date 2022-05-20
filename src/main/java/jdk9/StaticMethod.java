@@ -1,4 +1,4 @@
-package java9;
+package jdk9;
 
 import java.util.List;
 import java.util.Map;

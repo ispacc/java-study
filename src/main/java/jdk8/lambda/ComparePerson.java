@@ -1,4 +1,4 @@
-package java8.lambda;
+package jdk8.lambda;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,7 +40,7 @@ public class ComparePerson {
      * 方法二：lambda
      */
     public static ArrayList<Person> method2(ArrayList list) {
-        Comparator<Person> res = (Person o1, Person o2) -> o1.getAge().compareTo(o2.getAge());
+        Comparator<Person> res = (o1, o2) -> o1.getAge().compareTo(o2.getAge());
         list.sort(res);
         return list;
     }

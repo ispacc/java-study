@@ -1,4 +1,4 @@
-package java8.stream;
+package jdk8.stream;
 
 import org.junit.jupiter.api.Test;
 
