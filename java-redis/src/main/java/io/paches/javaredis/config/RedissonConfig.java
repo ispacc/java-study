@@ -4,5 +4,6 @@ public class RedissonConfig {
     public static void main(String[] args) {
         System.out.println("HeeloWorld");
         System.out.println();
+        System.out.println();
     }
 }
