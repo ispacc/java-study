@@ -1,5 +1,7 @@
 package io.paches.javaredis.config;
 
 public class RedissonConfig {
-    s
+    public static void main(String[] args) {
+
+    }
 }
