@@ -14,6 +14,7 @@ public class Demo {
         int j = i++;
         int k = i + ++i * i++;
         System.out.println(i);
+        System.out.println(i);
         System.out.println(j);
         System.out.println(k);
     }
