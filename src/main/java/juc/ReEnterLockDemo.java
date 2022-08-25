@@ -5,7 +5,7 @@ package juc;
  *  同一线程可以多次获得同一把锁（递归锁）
  */
 public class ReEnterLockDemo {
-    static Object objectLockA = new Object();
+    static final Object objectLockA = new Object();
 
     public static void method1() {
         new Thread(() -> {
