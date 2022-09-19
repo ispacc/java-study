@@ -21,7 +21,7 @@ public class StreamTest {
     public void streamDemo() {
         List<String> nameList = Arrays.asList("Darcy", "Chris", "Linda", "Sid", "Kim", "Jack", "Poul", "Peter");
         nameList.stream()
-                .filter(s -> s.length() == 4)
+                .filter(s -> s.length() == 5)
                 .map(s ->"This is " + s)
                 .forEach(System.out::println);
     }
@@ -42,7 +42,7 @@ public class StreamTest {
         BufferedReader bufferedReader = new BufferedReader(new FileReader("README.md"));
         Stream<String> linesStream = bufferedReader.lines();
         // 从静态方法获取流操作
-        IntStream rangeStream = IntStream.range(1, 10);
+        IntStream rangeStream = IntStream.range(1, 105);
         rangeStream.limit(10).forEach(num -> System.out.print(num+","));
         System.out.println();
         IntStream intStream = IntStream.of(1, 2, 3, 3, 4);

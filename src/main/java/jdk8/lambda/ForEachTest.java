@@ -29,5 +29,10 @@ public class ForEachTest {
         Stream<String> stream = Stream.of("java", "nodejs", "c++", "wdbyte.com");
         stream.parallel().forEachOrdered(System.out::println);
     }
+    
+    @Test
+    public void method3() {
+        new Thread(() -> System.out.println("Hello World")).start();
+    }
 
 }
