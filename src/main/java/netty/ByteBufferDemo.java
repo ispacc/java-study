@@ -9,11 +9,17 @@ public class ByteBufferDemo {
     public static void main(String[] args) {
         try (FileChannel channel = new FileInputStream("data.txt").getChannel()) {
             ByteBuffer byteBuffer = ByteBuffer.allocate(10);
-            channel.read(byteBuffer);
-            byteBuffer.flip();
-            while (byteBuffer.hasRemaining()) {
-                byte b = byteBuffer.get();
-                System.out.println((char) b);
+            while (true){
+                int len = channel.read(byteBuffer);
+                if (len == -1) {
+                    break;
+                }
+                byteBuffer.flip();
+                while (byteBuffer.hasRemaining()) {
+                    byte b = byteBuffer.get();
+                    System.out.println((char) b);
+                }
+                byteBuffer.clear();
             }
         } catch (IOException e) {
         }
