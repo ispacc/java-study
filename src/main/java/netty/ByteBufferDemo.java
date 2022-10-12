@@ -9,6 +9,7 @@ import java.nio.channels.FileChannel;
 public class ByteBufferDemo {
     public static void main(String[] args) {
         try (FileChannel channel = new FileInputStream("data.txt").getChannel()) {
+            var x = 19;
             ByteBuffer byteBuffer = ByteBuffer.allocate(10);
             while (true){
                 int len = channel.read(byteBuffer);
