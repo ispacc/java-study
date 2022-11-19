@@ -6,7 +6,7 @@ package 单例模式;
  */
 
 public class Singleton5 {
-    private volatile static Singleton5 instance;
+    private static volatile Singleton5 instance;
     private Singleton5() {}
 
     public static Singleton5 getInstance() {
